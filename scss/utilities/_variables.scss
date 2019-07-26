@@ -1,0 +1,75 @@
+// **************************************
+// utilities/_variables.scss
+// Variables for fonts, breakpoints, and colors
+// **************************************
+
+
+/* -------------------------
+FONT VARIABLES
+------------------------- */
+$primary-font-stack: 'Lato', sans-serif;
+
+
+/* -------------------------
+DEFAULT COLOR VARIABLES
+------------------------- */
+$primary-color: #58e1c1;
+$secondary-color: #50dcfc;
+
+
+
+/* -------------------------
+TEXT COLOR VARIABLES
+------------------------- */
+$paragraph-text-color: #828282;
+$white-color: #fff;
+$nav-inactive-text-color: #606060;
+$headline--secondary-text-color: #a4a4a4;
+$blockquote-text-color: #808080;
+$input-text-color: #3a3a3a;
+$input-placeholder-text-color: #757575;
+$grid-system-text-color: #808080;
+
+
+
+/* -------------------------
+BUTTON COLOR VARIABLES
+------------------------- */
+$success-button-color: #63cc82;
+$error-button-color: #e47579;
+$warning-button-color: #fd7856;
+$info-button-color: #927bc1;
+
+
+
+/* -------------------------
+GRID SYSTEM COLOR VARIABLES
+------------------------- */
+$grid-col-12-color: #80e8d0;
+$grid-col-6-color: #3fabc9;
+$grid-col-4-color: #7fe6fd;
+$grid-col-3-color: #ddb2ee;
+$grid-col-5-color: #88d9a0;
+$grid-col-7-color: #ec9fa3;
+$grid-col-8-color: #fd9f85;
+
+
+
+/* -------------------------
+IMAGE COLOR VARIABLES
+------------------------- */
+$image-border-color: #cdcdcd;
+
+
+
+/* -------------------------
+BREAKPOINT VARIABLES
+------------------------- */
+$desktop-breakpoint: 769px;
+
+
+
+/* -------------------------
+BUTTON/LINK VARIABLES
+------------------------- */
+$button-border-radius: 6px;

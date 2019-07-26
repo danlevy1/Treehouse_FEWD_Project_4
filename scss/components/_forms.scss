@@ -1,0 +1,32 @@
+// **************************************
+// components/_forms.scss
+// Form styles
+// **************************************
+
+.form {
+
+    // .form__label--hidden
+    &__label--hidden {
+        display: none;
+    }
+
+    // .form__input
+    &__input {
+        display: block;
+        width: calc(100% - 20px);
+        margin: auto;
+        padding: 30px 0 10px 10px;
+        @include text($size: 0.9rem, $weight: 400, $color: $input-text-color, $line-height: null);
+        border-bottom: 5px solid $primary-color;
+
+        // .form__input:placeholder
+        &:placeholder {
+            color: $input-placeholder-text-color;
+        }
+    }
+
+    // Keeps login button full width for desktop view
+    .btn--default {
+        width: 100% !important;
+    }
+}

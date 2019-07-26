@@ -1,0 +1,50 @@
+// **************************************
+// components/_typography.scss
+// Typography section styles
+// **************************************
+
+// Body font-stack
+.container {
+    font-family: $primary-font-stack;
+}
+
+.headline {
+
+    //.headline--primary
+    &--primary {
+        @include text($size: 2.2rem, $weight: 700, $color: $primary-color, $line-height: null);
+        padding: 10px 0 40px 30px;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            font-size: 1.7rem;
+        }
+    }
+
+    //.headline--secondary
+    &--secondary {
+        @include text($size: 1.2rem, $weight: 300, $color: $headline--secondary-text-color, $line-height: null);
+        padding: 75px 0 20px 0;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.link {
+    @extend %link;
+}
+
+.blockquote {
+    @include text($size: 1.7rem, $weight: 300, $color: $blockquote-text-color, $line-height: 2.2rem);
+    margin: 20px 20px 0 50px;
+    padding-left: 20px;
+    border-left: 10px solid $primary-color;
+    border-radius: 8px;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        border-width: 7px;
+    }
+}

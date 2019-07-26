@@ -1,0 +1,40 @@
+// **************************************
+// utilities/_images.scss
+// Common styles
+// **************************************
+
+%img {
+    display: block;
+    margin: 20px auto;
+}
+
+%nav {
+    display: flex;
+    flex-direction: column;
+}
+
+%nav__item {
+    @include text($size: 1rem, $weight: 400, $color: $nav-inactive-text-color, $line-height: null);
+    text-align: center;
+    padding: 15px 0;
+    margin: 5px 0;
+}
+
+%link {
+    @include text($size: 1.1rem, $weight: 700, $color: $secondary-color, $line-height: 1.7rem);
+}
+
+%btn {
+    width: 100%;
+    @include text($size: 1rem, $weight: 700, $color: $white-color, $line-height: null);
+    text-transform: uppercase;
+    padding: 12px 0;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+%grid-col-display {
+    @include text($size: 1rem, $weight: 400, $color: $grid-system-text-color, $line-height: null);
+    padding: 12px;
+    border-radius: 6px;
+}

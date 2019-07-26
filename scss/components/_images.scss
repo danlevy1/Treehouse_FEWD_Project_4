@@ -1,0 +1,44 @@
+// **************************************
+// components/_images.scss
+// Image styles
+// **************************************
+
+.img {
+
+    // .img--logo
+    &--logo {
+        @extend %img;
+        padding-bottom: 30px;
+        height: 120px;
+        width: auto;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            height: 80px;
+            padding: 0;
+        }
+    }
+
+    // .img--avatar
+    &--avatar {
+        @extend %img;
+        height: 300px;
+        width: auto;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            height: 200px;
+        }
+    }
+
+    // .img--frame
+    &--frame {
+        @extend %img;
+        padding: 15px;
+        border: 1px solid $image-border-color;
+        height: 300px;
+        width: auto;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            height: 200px;
+        }
+    }
+}

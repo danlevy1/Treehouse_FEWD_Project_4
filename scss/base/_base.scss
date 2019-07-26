@@ -1,0 +1,9 @@
+// **************************************
+// base/base.scss
+// Element styles
+// **************************************
+
+p {
+    @include text($size: 1.1rem, $weight: 400, $color: $paragraph-text-color, $line-height: 1.7rem);
+    padding: 0 10px;
+}

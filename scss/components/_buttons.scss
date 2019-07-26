@@ -1,0 +1,48 @@
+// **************************************
+// utilities/_mixins.scss
+// Button styles
+// **************************************
+
+
+// Styles for all buttons
+[class^="btn"] {
+    @extend %btn;
+
+    // Horizontal layout of buttons
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        width: 16%;
+
+        // -2px accounts for text indentation
+        margin-left: calc(2% - 2px);
+        margin-right: calc(2% - 2px);
+    }
+}
+
+// Button background colors
+.btn {
+
+    //.btn--default
+    &--default {
+        background-color: $secondary-color;
+    }
+
+    //.btn--success
+    &--success {
+        background-color: $success-button-color;
+    }
+
+    //.btn--error
+    &--error {
+        background-color: $error-button-color;
+    }
+
+    //.btn--warning
+    &--warning {
+        background-color: $warning-button-color;
+    }
+
+    //.btn--info
+    &--info {
+        background-color: $info-button-color;
+    }
+}

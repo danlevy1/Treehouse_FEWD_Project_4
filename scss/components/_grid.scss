@@ -1,0 +1,136 @@
+// **********************************************
+// _grid.scss
+// Styles related to the grid system and main container
+// **********************************************
+
+
+// Grid base class
+.grid {
+
+  // .grid__row
+  &__row {
+    @include flex-container($direction: column, $basis: null);
+    padding: 1em 10px;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  // .grid__col
+  &__col {
+
+    // create grid columns dynamically
+    // loop through each column size
+    @for $i from 1 through 12 {
+
+      // concatenate CSS selector, ie when $i = 1,
+      // selector would be .grid__col--1
+      &--#{$i} {
+
+        // Base styles applied to all grid columns 
+        // NOTE: could be converted to a placeholder, along with margin from the  media query
+        margin-top: 10px;
+        flex-basis: 100%;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+          // Base stlyes applied to all grid columns
+          margin-top: 0;
+
+          // Make column width a percentage of the column number / total columns
+          flex-basis: #{$i / 12 * 100 + "%"};
+        }
+      }
+    }
+  }
+}
+
+// Targets all elements with classes that begin with grid__col
+[class^=grid__col] {
+
+  // grid__col + grid__col, targets two sibling columns
+  &+& {
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+      // Add grid gutter
+      margin-left: 10px;
+    }
+  }
+}
+
+// Grid styles in "grid system" section
+.theme__colors {
+
+  // Default styles
+  &[class^="grid__col"] {
+    @extend %grid-col-display;
+  }
+
+  // Background colors
+  &.grid__col {
+
+    // .theme__colors.grid__col--3
+    &--3 {
+      background-color: $grid-col-3-color;
+    }
+
+    // .theme__colors.grid__col--4
+    &--4 {
+      background-color: $grid-col-4-color;
+    }
+
+    // .theme__colors.grid__col--5
+    &--5 {
+      background-color: $grid-col-5-color;
+    }
+
+    // .theme__colors.grid__col--6
+    &--6 {
+      background-color: $grid-col-6-color;
+    }
+
+    // .theme__colors.grid__col--7
+    &--7 {
+      background-color: $grid-col-7-color;
+    }
+
+    // .theme__colors.grid__col--8
+    &--8 {
+      background-color: $grid-col-8-color;
+    }
+
+    // .theme__colors.grid__col--12
+    &--12 {
+      background-color: $grid-col-12-color;
+
+      @include media-query($breakpoint: $desktop-breakpoint) {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+// Centers element
+.centered {
+  @include media-query($breakpoint: $desktop-breakpoint) {
+    margin: auto;
+  }
+}
+
+// Body styles
+.container {
+  margin: 14px 20px;
+
+  @include media-query($breakpoint: $desktop-breakpoint) {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+// Card padding in desktop view
+.card {
+  @include media-query($breakpoint: $desktop-breakpoint) {
+    padding-right: 30px;
+  }
+}
