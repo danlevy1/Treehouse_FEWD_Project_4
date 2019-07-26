@@ -553,7 +553,7 @@ p {
   color: #3a3a3a;
   border-bottom: 5px solid #58e1c1;
 }
-.form__input:placeholder {
+.form__input::placeholder {
   color: #757575;
 }
 .form .btn--default {
