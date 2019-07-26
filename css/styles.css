@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
-@import 'reset.css';
 /* -------------------------
 FONT VARIABLES
 ------------------------- */
@@ -67,6 +66,169 @@ BUTTON/LINK VARIABLES
   color: #808080;
   padding: 12px;
   border-radius: 6px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+em,
+blockquote {
+  font-style: italic;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li {
+  list-style: none;
 }
 
 p {
@@ -215,6 +377,11 @@ p {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .theme__colors[class^=grid__col] {
+    text-align: center;
+  }
+}
 .theme__colors.grid__col--3 {
   background-color: #ddb2ee;
 }
@@ -284,7 +451,7 @@ p {
   .nav {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 70px;
+    padding: 0 200px 0 100px;
     margin: 0;
     height: 100%;
   }
@@ -306,7 +473,7 @@ p {
 }
 @media screen and (min-width: 769px) {
   .headline--primary {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 }
 .headline--secondary {
@@ -323,7 +490,7 @@ p {
 
 .blockquote {
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #808080;
   line-height: 2.2rem;
   margin: 20px 20px 0 50px;
@@ -351,22 +518,24 @@ p {
   }
 }
 .img--avatar {
-  height: 300px;
-  width: auto;
+  width: 50%;
+  height: auto;
 }
 @media screen and (min-width: 769px) {
   .img--avatar {
+    width: auto;
     height: 200px;
   }
 }
 .img--frame {
   padding: 15px;
   border: 1px solid #cdcdcd;
-  height: 300px;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 @media screen and (min-width: 769px) {
   .img--frame {
+    width: auto;
     height: 200px;
   }
 }

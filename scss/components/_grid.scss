@@ -65,6 +65,10 @@
   // Default styles
   &[class^="grid__col"] {
     @extend %grid-col-display;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+      text-align: center;
+    }
   }
 
   // Background colors

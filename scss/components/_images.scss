@@ -21,10 +21,11 @@
     // .img--avatar
     &--avatar {
         @extend %img;
-        height: 300px;
-        width: auto;
+        width: 50%;
+        height: auto;
 
         @include media-query($breakpoint: $desktop-breakpoint) {
+            width: auto;
             height: 200px;
         }
     }
@@ -34,10 +35,11 @@
         @extend %img;
         padding: 15px;
         border: 1px solid $image-border-color;
-        height: 300px;
-        width: auto;
+        width: 100%;
+        height: auto;
 
         @include media-query($breakpoint: $desktop-breakpoint) {
+            width: auto;
             height: 200px;
         }
     }
