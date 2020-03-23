@@ -1,6 +1,6 @@
 # Web Style Guide
 
-My fourth project for the Treehouse Front-End Development Techdegree (see [here](https://join.teamtreehouse.com/front-end-web-development-techdegree/))
+My fourth project for the Treehouse Front-End Development Techdegree (see [here](https://join.teamtreehouse.com/front-end-web-development-techdegree/)).
 
 
 
